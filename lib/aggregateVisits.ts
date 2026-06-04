@@ -87,18 +87,13 @@ export function aggregateVisits(visits: AiVisit[]): AggregatedVisitData {
 
     const dateKey = toDateKey(visit.timestamp);
 
-    // day×bot matrix
     let dayCounts = dayMap.get(dateKey);
     if (!dayCounts) {
       dayCounts = zeroCounts();
       dayMap.set(dateKey, dayCounts);
     }
     dayCounts[classifiedBot]++;
-
-    // bot totals
     botTotals[classifiedBot]++;
-
-    // page totals
     pageTotals[visit.page_path] = (pageTotals[visit.page_path] ?? 0) + 1;
   }
 
