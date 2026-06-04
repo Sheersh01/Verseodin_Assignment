@@ -6,7 +6,7 @@ Standard scaffold setup. No changes to seed scripts or config.
 
 ```bash
 git clone <repo-url>
-cd verseodin-trial-2026
+cd Verseodin_Assignment
 npm install
 npm run seed      # generates public/visits.json + public/monitoring-events.json
 npm run dev       # http://localhost:3000
